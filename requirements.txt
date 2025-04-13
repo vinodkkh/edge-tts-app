@@ -1,2 +1,4 @@
-Flask
+gradio
 edge-tts
+flask
+requests
