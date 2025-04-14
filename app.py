@@ -2,7 +2,6 @@ import gradio as gr
 import edge_tts
 import asyncio
 import uuid
-import os
 
 async def generate_audio(text, voice):
     filename = f"tts_{uuid.uuid4()}.mp3"
@@ -13,7 +12,6 @@ async def generate_audio(text, voice):
 def tts_wrapper(text, voice):
     return asyncio.run(generate_audio(text, voice))
 
-# You can replace or expand this list with full voice list
 voices = [
     "en-US-GuyNeural", "en-US-JennyNeural",
     "hi-IN-MadhurNeural", "hi-IN-SwaraNeural"
