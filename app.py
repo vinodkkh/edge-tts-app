@@ -29,5 +29,9 @@ app = gr.Interface(
     title="Edge-TTS App (Free)",
     description="Convert text to speech using Microsoft Edge TTS voices."
 )
+import os
 
-app.launch(server_name="0.0.0.0", server_port=8080)
+port = int(os.environ.get("PORT", 8080))  # Render assigns this
+app.launch(server_name="0.0.0.0", server_port=port)
+
+
